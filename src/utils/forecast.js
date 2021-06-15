@@ -1,7 +1,7 @@
 const request = require('request')
 
 const forecast = (latitude, longitude, callback) => {
-    //const url = 'http://api.weatherstack.com/current?access_key=34911b3b1f335cf458517358657aaf10&query=' + latitude + ',' + longitude + '&units=m'
+    //const url = 'http://api.weatherstack.com/current?access_key=' + api_key + '&query=' + latitude + ',' + longitude + '&units=m'
     const url = 'https://api.openweathermap.org/data/2.5/onecall?lat=' + latitude + '&lon=' + longitude + '&units=metric&appid=534f23b68fb8dc08545c7c524833ac7a'
 
     request({ url, json: true}, (error, { body }) => {
@@ -13,6 +13,7 @@ const forecast = (latitude, longitude, callback) => {
             const temperature = body.current.temp
             const feelslike = body.current.feels_like
 
+            // vandaag + 7e daagse forecast
             // De datums berekenen
             const today_date_unix = body.daily[0].dt * 1000
             const today_date = new Date(today_date_unix)
