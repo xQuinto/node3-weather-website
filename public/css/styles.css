@@ -64,7 +64,7 @@ button {
 }
 
 .daily-forecast-table tr {
-    background-color: #009879;
+    background-color: #55256b;
     color: #ffffff;
     text-align: left;
 }
@@ -75,7 +75,7 @@ button {
 }
 
 .daily-forecast-table tbody tr {
-    border-bottom: 1px solid #dddddd;
+    border-bottom: 1px solid #0e0d0d;
 }
 
 .daily-forecast-table tbody tr:nth-of-type(even) {
@@ -83,7 +83,7 @@ button {
 }
 
 .daily-forecast-table tbody tr:last-of-type {
-    border-bottom: 2px solid #009879;
+    border-bottom: 2px solid #7b4892;
 }
 
 .daily-forecast-table tbody tr.active-row {
